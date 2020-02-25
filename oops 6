@@ -1,0 +1,92 @@
+#include<iostream>
+#include<new>
+using namespace std;
+struct nod
+{
+    int info;
+    struct nod *next;
+};
+type def struct nod*node;
+class list
+{
+    node *f;
+    public:list()
+{
+    f=NULL;
+}
+}
+void insert(int num)
+{
+    node *p=new node;
+    p->info=num;
+    p->next=NULL;
+    p->next=f;
+    f=p;
+}
+void delete()
+{
+    node *temp=f;
+    if(f=NULL)
+    cout<<"no choice";
+    else
+    {
+        cout<<"deleted element is: \n"<<f->info;
+        f=f->next;
+        delete temp;
+        
+    }
+    return;
+}
+void display()
+{
+    node *temp=f;
+    if(f=NULL)
+    cout<<"\n list empty";
+    else
+    {
+        while(temp!=NULL)
+        {
+            cout<<"temp->info";
+            temp=temp->next;
+        }
+    }
+}
+    int main()
+    {
+        int num,ch=1;
+        list ob;
+        cout<<"1.insert \n 2.delete \n 3.exit \n"<<endl;
+        cin>>ch;
+        switch(ch)
+        {
+            case1:cout<<"enter the no. to be inserted \n";
+            cin>>num;
+            ob.insert(num);
+            break;
+            case 2: ob.del()
+                    ob.display()
+                    break;
+            case 3:return 0;
+            default: cout<<"invalid choice \n";
+            break;
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
