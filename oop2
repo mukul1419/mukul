@@ -1,0 +1,54 @@
+#include<iostream>
+using namespace std;
+class employee
+{
+    int num;
+    char name[30];
+    float bs,da,gs,it,ns;
+    public: void read();
+            void calculate();
+            void display();
+};
+void employee::read()
+{
+cout<<"enter the name of employee";
+cin>>name;
+cout<<"enter the id of employee";
+cin>>num;
+cout<<"enter the basic salry of employee";
+cin>>bs;
+}
+void employee::calculate()
+{
+    da=0.52*bs;
+    gs=da+bs;
+    it=0.3*gs;
+    ns=gs-it;
+}
+void employee::display()
+{
+cout<<"employee name,id,bs,da,gs,it,ns \n";
+cout<<"num"<<"name"<<"bs"<<"da"<<"gs"<<"it"<<"ns";
+}
+int main()
+{
+    int i,n;
+    cout<<"enter the value of n";
+    cin>>n;
+    employee e[n],*p;
+    for(i=0;i<n;i++)
+    {
+        p=&e[i];
+        p->read();
+        p->calculate();
+    }
+    for(i=0;i<n;i++)
+    {
+        p->display();
+    }
+    return 0;
+    }
+
+
+
+
